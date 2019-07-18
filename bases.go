@@ -118,7 +118,7 @@ func file(title, filter string, directory bool) (string, bool, error) {
 	tmp := strings.Split(out, ":")
 	tmp[0] = strings.Replace(tmp[0], "alias ", "Volumes/", -1)
 
-	outPath := "/" + strings.Join(tmp[0:len(tmp)-1], "/")
+	outPath := "/" + strings.Join(tmp[0:len(tmp)], "/")
 
 	return outPath, ret, err
 }
