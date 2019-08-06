@@ -19,6 +19,8 @@ func ChooseEntry(title, text string, entries []string) string {
 // ChooseFile allows the user to choose a file or directory
 func ChooseFile(title, filter string, directory bool) (string, bool, error) {
 	path, success, err := file(title, filter, directory)
+	// path = strings.Replace(path, " ", "\\ ", -1)
+
 	return path, success, err
 }
 
