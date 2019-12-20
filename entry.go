@@ -8,6 +8,7 @@ import (
 
 // EnterIntegerWithDefaultAndMinValue provides a dialog for the user to enter an integer
 func EnterIntegerWithDefaultAndMinValue(title, text string, minValue, defaultValue int) (int, error) {
+	text = text + fmt.Sprintf("\nMust be greater or equal to %d.", minValue)
 	value, success, err := entry(title, text, strconv.Itoa(defaultValue))
 	if err != nil {
 		return 0, fmt.Errorf("error")
